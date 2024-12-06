@@ -149,7 +149,7 @@ public static int  createDatabase(ConnectionData cd,String databaseName) throws 
         return (temp>=65&&temp<=90||temp>=97&&temp<=122)?temp:GrandomForText();
     }
     public static String makePreetierText(String str){
-        return (""+str.charAt(0)).toUpperCase()+""+str.substring(1,str.length()).toLowerCase();
+        return (str == null || str.isEmpty())?"":(""+str.charAt(0)).toUpperCase()+""+str.substring(1,str.length()).toLowerCase();
     }
     public static Connection stayConnected(ConnectionData con)throws Exception{
         return
